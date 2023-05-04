@@ -1,7 +1,44 @@
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
+.title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  text-align: center;
+  font-size: 42px;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafb);
+.left_taskbar {
+  width: 130px;
+  height: 100vh;
+  background-color: bisque;
+  position: fixed;
+  left: -120px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left_taskbar:hover {
+  transform: translateX(120px);
+}
+
+.project_items {
+  position: absolute;
+  list-style: none;
+}
+
+.project_items li{
+  margin: 30px -10px;
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.project_items a:nth-child(1) li {
+  background-image: url("img/grizzlies.png");
+}
+
+.project_items a:nth-child(2) li {
+  background-image: url("img/pacers.png");
 }
