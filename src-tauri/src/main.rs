@@ -6,7 +6,7 @@ use std::process::{Command, Stdio};
 use std::io::{BufRead, BufReader};
 
 #[tauri::command]
-fn excute_python(start: String, end: String) {
+async fn excute_python(start: String, end: String) {
     let mut output = Command::new("python")
         .arg("../python_loader/main.py")
         .arg("--start")
