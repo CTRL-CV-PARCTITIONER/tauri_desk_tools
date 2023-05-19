@@ -1,9 +1,6 @@
-body {
-  width: 100%;
-  height: 100vh;
-  background-color: aquamarine;
+.video {
+  position: absolute;
 }
-
 .title {
   position: absolute;
   left: 0;
@@ -17,11 +14,13 @@ body {
 
 .left_taskbar {
   width: 130px;
-  height: 100vh;
+  height: 110vh;
   background-color: bisque;
   position: fixed;
-  left: -120px;
+  left: -125px;
+  top: -30px;
   transition: transform 0.5s ease-in-out;
+  z-index: 99999;
 }
 
 .left_taskbar:hover {
@@ -41,11 +40,11 @@ body {
   border-radius: 50%;
 }
 
-.project_items a:nth-child(1) li {
+.project_items li:nth-child(1) {
   background-image: url("img/grizzlies.png");
 }
 
-.project_items a:nth-child(2) li {
+.project_items li:nth-child(2) {
   background-image: url("img/pacers.png");
 }
 
@@ -105,3 +104,4 @@ body {
   justify-content: center;
   align-items: center;
 }
+

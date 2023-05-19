@@ -1,0 +1,82 @@
+h3 {
+    font-size: 25px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.cut_off_rule {
+    width: 4px;
+    height: 100vh;
+    background-color: rgb(211, 34, 34);
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+}
+
+.tool_part {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 15vh;
+    left: -1%;
+}
+
+.tool_part div {
+    position: absolute;
+    top: 5vh;
+    width: 40vw;
+    height: 70vh;
+    /* background-color: blue; */
+}
+
+/* left 生成视频部分 */
+
+.left {
+    left: 5vw;
+}
+
+.left ul {
+    position: absolute;
+    line-height: 10px;
+    top: 15vh;
+    left: -3vw;
+    width: 30vw;
+}
+
+.left ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.left ul li input {
+    width: 35vw;
+    height: 10px;
+}
+
+.left button {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(119, 206, 218);
+}
+
+/* right 播放视频部分 */
+
+.right {
+    right: 5vw
+}
+
+.inputfile, .right button {
+    width: 25vw;
+    height: 40vh;
+    font-size: 50px;
+    position: absolute;
+    top: 15vh;
+    left: 7vw;
+}
+
+.inputfile {
+    z-index: 999999;
+}
