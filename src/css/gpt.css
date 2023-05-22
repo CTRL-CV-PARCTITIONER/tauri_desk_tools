@@ -1,6 +1,3 @@
-.video {
-  position: absolute;
-}
 .title {
   position: absolute;
   left: 0;
@@ -10,42 +7,6 @@
   font-size: 46px;
   color: black;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.left_taskbar {
-  width: 130px;
-  height: 110vh;
-  background-color: bisque;
-  position: fixed;
-  left: -125px;
-  top: -30px;
-  transition: transform 0.5s ease-in-out;
-  z-index: 99999;
-}
-
-.left_taskbar:hover {
-  transform: translateX(120px);
-}
-
-.project_items {
-  position: absolute;
-  list-style: none;
-}
-
-.project_items li{
-  margin: 30px -10px;
-  width: 70px;
-  height: 70px;
-  background-size: cover;
-  border-radius: 50%;
-}
-
-.project_items li:nth-child(1) {
-  background-image: url("img/grizzlies.png");
-}
-
-.project_items li:nth-child(2) {
-  background-image: url("img/pacers.png");
 }
 
 .explain {

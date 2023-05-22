@@ -1,0 +1,43 @@
+.left_taskbar {
+    width: 130px;
+    height: 110vh;
+    background-color: rgb(53, 32, 32);
+    position: fixed;
+    left: -130px;
+    top: -30px;
+    transition: transform 0.5s ease-in-out;
+    border: 3px outset rgb(157, 167, 185);
+  }
+  
+  .left_taskbar:hover {
+    transform: translateX(120px);
+  }
+
+  .left_taskbar button{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .left_taskbar button:nth-child(1){
+    margin: 50% 25%;
+    background-image: url("./img/grizzlies.png");
+  }
+
+  .left_taskbar button:nth-child(2){
+    margin: 130% 25%;
+    background-image: url("./img/pacers.png");
+  }
+
+  .left_taskbar button:nth-child(3){
+    margin: 210% 25%;
+  }
+
+  .left_taskbar button:nth-child(4){
+    margin: 290% 25%;
+  }

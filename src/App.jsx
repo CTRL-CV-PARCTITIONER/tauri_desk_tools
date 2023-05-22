@@ -1,29 +1,39 @@
-import React from 'react';
+import React, {useRef } from 'react';
 import './App.css'
-import { invoke } from '@tauri-apps/api/tauri';
 import {BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
 import Visual from './page/visual';
 import Gpt from './page/gpt';
 
 function App() {
 
+  const visualRef = useRef(null);
+
+  const gptRef = useRef(null);
+
+  const handVisualRefOnclick = () => {
+    visualRef.current.click();
+  }
+
+  const handGPTOnclick = () => {
+    gptRef.current.click();
+  }
+
   return (
     <>
-      <ul>
-        <Routes>
-          <Route path="/" element={<home />} ></Route>
-          <Route path="/visual" element={<Visual />} ></Route>
-          <Route path="/gpt" element={<Gpt />} ></Route>
-        </Routes>
+      <Routes>
+        <Route path="/visual" element={<Visual />} ></Route>
+        <Route path="/" element={<Gpt />} ></Route>
+      </Routes>
+      <NavLink to="/" id="gpt" ref={gptRef}></NavLink>
+      <NavLink to="/visual" id="visual" ref={visualRef}></NavLink>
 
-        <li><NavLink to="/" id="home">home</NavLink></li>
-        <li><NavLink to="/gpt" id="gpt">gpt</NavLink></li>
-        <li><NavLink to="/visual" id="visual">visual</NavLink></li>
-      </ul>
+      <div className='left_taskbar'>
+        <button onClick={handGPTOnclick} id="handGPTOnclick" title='GPT'>GPT</button>
+        <button onClick={handVisualRefOnclick} id="handGPTOnclick" title='可视化工具'>visual</button>
+      </div>
     </>
   )
 };
-
 
 
 export default App;
