@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = 'sk-...E5gI'
+openai.api_key = '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'
 
 prompt = input("请输入:")
 

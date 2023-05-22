@@ -1,13 +1,14 @@
 import cv2
 import sys
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def play_video(video_path):
-    # 创建VideoCapture对象
     cap = cv2.VideoCapture(video_path)
-
     # 检查是否成功打开视频
     if not cap.isOpened():
-        print("无法打开视频文件")
+        logger.info("无法打开视频文件")
         return
 
     while True:
@@ -31,7 +32,6 @@ def play_video(video_path):
 
 
 if __name__ == "__main__":
-    args = sys.argv
-    print(args)
-    
-    # play_video(args)
+    video_path = sys.argv[2]
+    print(video_path)
+    play_video(video_path)

@@ -8,6 +8,9 @@ import cv2
 import numpy as np
 import os
 from tqdm import tqdm
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 def main(args):

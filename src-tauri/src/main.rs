@@ -5,6 +5,7 @@
 use std::process::{Command, Stdio};
 use std::io::{BufRead, BufReader};
 
+
 #[tauri::command]
 async fn generate_video(introduction: String) {
     let mut output = Command::new("python")
@@ -14,7 +15,6 @@ async fn generate_video(introduction: String) {
         .stdout(Stdio::piped())
         .spawn()
         .expect("Failed to execute command");
-
     if let Some(stdout) = output.stdout.take() {
         let reader = BufReader::new(stdout);
         for line in reader.lines() {
@@ -33,6 +33,7 @@ async fn generate_video(introduction: String) {
 
 #[tauri::command]
 async fn play_video(introduction: String) {
+    println!("{}", introduction);
     let mut output = Command::new("python")
         .arg("../python_loader/play_video.py")
         .arg("--introduction")

@@ -6,7 +6,7 @@ h3 {
 
 .cut_off_rule {
     width: 4px;
-    height: 100vh;
+    height: 70vh;
     background-color: rgb(211, 34, 34);
     position: absolute;
     left: 50%;
@@ -15,7 +15,7 @@ h3 {
 
 .tool_part {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     position: absolute;
     top: 15vh;
     left: -1%;
@@ -65,18 +65,29 @@ h3 {
 /* right 播放视频部分 */
 
 .right {
-    right: 5vw
+    right: 5vw;
 }
 
-.inputfile, .right button {
-    width: 25vw;
-    height: 40vh;
-    font-size: 50px;
+.display_frame{
     position: absolute;
-    top: 15vh;
-    left: 7vw;
+    top: 20vh;
+    width: 35vw;
+    height: 2vh;
 }
 
-.inputfile {
-    z-index: 999999;
+.select_file {
+    position: absolute;
+    top: 28vh;
+    right: 3vw;
+    /* width: 3vw; */
+    /* height: 1vh; */
+    text-align: center;
+}
+
+.play_video {
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    height: 40px;
+    background-color: rgb(119, 206, 218);
 }
